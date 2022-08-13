@@ -3,12 +3,14 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/tao-isaman/hello_golang/foobar"
 )
 
 var name string = "isaman"
 
 func main(){
-	
+	fmt.Println(foobar.Title)
 }
 
 func mainTemp() {
