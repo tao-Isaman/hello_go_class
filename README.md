@@ -145,4 +145,25 @@ for _, prime := range primes {
 
 ```
 
+### Basic Syntax - Type Cast with Rune 
+```go
+func main(){
+	given := "abcefg"
+
+	fmt.Println(matcher(given))
+	fmt.Println(matcher("abcef"))
+	fmt.Println(matcher("ภาษาไทย"))
+}
+
+func matcher(str string) []string {
+	var r []string
+	s := []rune(str)
+
+	for s = append(s, []rune("*")...); len(s) > 1; s = s[2:] {
+		r = append(r, string(s[:2]))
+	}
+	return r
+}
+```
+
 
