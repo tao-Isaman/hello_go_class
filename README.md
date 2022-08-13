@@ -126,4 +126,23 @@ complex64 complex128
 
 ```
 
+## Basic Syntax - Array
+```go 
+
+var array [5]string // name[0] - name[4]
+
+primes := [...]int{2, 3, 5, 7, 11, 13}
+
+// for loop
+for i, prime := range primes {
+    fmt.Println(i, prime)
+}
+
+// under score requirer
+for _, prime := range primes {
+    fmt.Println(prime)
+}
+
+```
+
 

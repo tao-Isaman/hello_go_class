@@ -3,14 +3,16 @@ package main
 import (
 	"fmt"
 	"os"
-
-	"github.com/tao-isaman/hello_golang/foobar"
 )
 
 var name string = "isaman"
 
 func main(){
-	fmt.Println(foobar.Title)
+	primes := [...]int{2, 3, 5, 7, 11, 13}
+
+for _, prime := range primes {
+    fmt.Println(prime)
+}
 }
 
 func mainTemp() {
