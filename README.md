@@ -44,7 +44,7 @@ if ok {
 
 ```
 
-## ## Basic Syntax - loop 
+## Basic Syntax - loop 
 ```go 
 
 // for loop
@@ -63,3 +63,18 @@ for {
 }
 
 ```
+## Basic Syntax - get ENV
+```go 
+var name string = "isaman"
+
+func main() {
+	n := os.Getenv("NAME")
+	name := "isaman"
+	if n != "" {
+		name = n
+	}
+	fmt.Println("Hello,", name)
+
+}
+```
+
