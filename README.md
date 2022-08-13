@@ -1,8 +1,7 @@
 # go class by P'Yod
 
-## Basic Syntax
+## Basic Syntax - Variable
 
-### Variable
 ```go
 
 name := 'tao-isaman'
@@ -11,7 +10,7 @@ int_64 := 25
 
 ```
 
-### Function
+## Basic Syntax - Function
 ```go
 func add(a int, b int) int {
     return a + b
@@ -24,4 +23,43 @@ func add(a, b int) int {
 func squareArea(a float64) float64 {
     return a * a
 }
+
+func swap(a, b int) (int, int){
+	return b, a
+}
+```
+
+## Basic Syntax - control Flow if/else
+```go
+if ok := IsCoreect; ok {
+    println("It' correct")
+}
+
+same
+
+ok := IsCorrect()
+if ok {
+    println("It' correct")
+}
+
+```
+
+## ## Basic Syntax - loop 
+```go 
+
+// for loop
+for i := 0; i < 10; i++ {
+
+}
+
+// while loop
+for i <= 10 {
+
+}
+
+// infinity loop
+for {
+
+}
+
 ```
