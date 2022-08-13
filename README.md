@@ -234,5 +234,47 @@ func main() {
 }
 ```
 
+## Basic Syntax - defer 
+```go
+func main(){
+	printInt(9)
+}
+
+
+func printInt(n int){
+	defer fmt.Println(n)
+
+	n += 1
+	fmt.Println(n)
+}
+```
+
+## Basic Syntax - Interface Type
+```go
+func main(){
+	var i interface{}
+
+	i = 10 
+	fmt.Printf("type is %T, value is %v \n", i,i)
+
+	i = "ten"
+	fmt.Printf("type is %T, value is %v \n", i,i)
+
+	i = struct {
+		number int
+		text string
+	}{
+		number: 10,
+		text: "ten",
+	}
+	fmt.Printf("type is %T, value is %v \n", i,i)
+
+	i = func() string {
+		return "10"
+	}
+	fmt.Printf("type is %T, value is %v \n", i,i)
+}
+```
+
 
 

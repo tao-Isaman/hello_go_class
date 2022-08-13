@@ -9,6 +9,48 @@ import (
 	"strings"
 )
 
+func main(){
+	var i interface{}
+
+	i = 10 
+	fmt.Printf("type is %T, value is %v \n", i,i)
+
+	i = "ten"
+	fmt.Printf("type is %T, value is %v \n", i,i)
+
+	i = struct {
+		number int
+		text string
+	}{
+		number: 10,
+		text: "ten",
+	}
+	fmt.Printf("type is %T, value is %v \n", i,i)
+
+	i = func() string {
+		return "10"
+	}
+	fmt.Printf("type is %T, value is %v \n", i,i)
+}
+
+
+func mainBasic8(){
+	printInt(9)
+}
+
+
+func printInt(n int){
+	defer fmt.Println(n)
+
+	n += 1
+	fmt.Println(n)
+}
+
+
+
+
+
+
 var name string = "isaman"
 
 type rectangle struct {
@@ -17,7 +59,7 @@ type rectangle struct {
 }
 
 var jsonString = `{"width":10,"height":20}`
-func main() {
+func mainBasic7() {
 	rec1 := rectangle{Width: 10, Height: 20}
 	b, err := json.Marshal(&rec1)
 	if err != nil {
