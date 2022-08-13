@@ -208,5 +208,31 @@ func main(){
 }
 ```
 
+## Basic Syntax - Simple struc
+```go
+type rectangle struct {
+	Width  float64 `json:"width"`
+	Height float64 `json:"height"`
+}
+
+var jsonString = `{"width":10,"height":20}`
+func main() {
+	rec1 := rectangle{Width: 10, Height: 20}
+	b, err := json.Marshal(&rec1)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(string(b))
+
+	var rec2 rectangle
+	if err := json.Unmarshal([]byte(jsonString), &rec2); err != nil {
+		log.Panic(err)
+	}
+
+	fmt.Printf("%#v \n", rec2)
+}
+```
+
 
 
