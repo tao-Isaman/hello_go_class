@@ -3,18 +3,59 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
+	"strings"
 )
 
 var name string = "isaman"
 
+type Int int 
+func (i Int) toString() string {
+	return strconv.Itoa(int(i))
+}
+
+type String string
+func (s *String) toUpperCase() {
+	*s = String(strings.ToUpper(string(*s)))
+}
 
 func main(){
+	var test Int = 2
+	fmt.Println(test.toString())
+
+	var s String = "asdsd"
+	s.toUpperCase()
+	fmt.Println(s)
+}
+
+func mainBasic5(){
+	m := map[string]int {
+		"G" : 71,
+		"O" : 79,
+		"P" : 90,
+		"H" : 72,
+		"E" : 69,
+		"R" : 82,
+	}
+
+	var keys []string
+	var vals []int
+
+	for k, v := range m {
+		keys := append(keys, k)
+		vals := append(vals, v)
+		fmt.Println(keys, vals)
+	}
+}
+
+func mainBasic4(){
 	given := "abcefg"
 
 	fmt.Println(matcher(given))
 	fmt.Println(matcher("abcef"))
 	fmt.Println(matcher("ภาษาไทย"))
 }
+
 
 func matcher(str string) []string {
 	var r []string

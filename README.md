@@ -145,7 +145,7 @@ for _, prime := range primes {
 
 ```
 
-### Basic Syntax - Type Cast with Rune 
+## Basic Syntax - Type Cast with Rune 
 ```go
 func main(){
 	given := "abcefg"
@@ -165,5 +165,48 @@ func matcher(str string) []string {
 	return r
 }
 ```
+## Basic Syntax - Map easy 
+```go
+	m := map[string]int {
+		"G" : 71,
+		"O" : 79,
+		"P" : 90,
+		"H" : 72,
+		"E" : 69,
+		"R" : 82,
+	}
+
+	var keys []string
+	var vals []int
+
+	for k, v := range m {
+		keys := append(keys, k)
+		vals := append(vals, v)
+		fmt.Println(keys, vals)
+	}
+```
+
+## Basic Syntax - Create new Type
+```go
+type Int int 
+func (i Int) toString() string {
+	return strconv.Itoa(int(i))
+}
+
+type String string
+func (s *String) toUpperCase() {
+	*s = String(strings.ToUpper(string(*s)))
+}
+
+func main(){
+	var test Int = 2
+	fmt.Println(test.toString())
+
+	var s String = "asdsd"
+	s.toUpperCase()
+	fmt.Println(s)
+}
+```
+
 
 
