@@ -52,6 +52,11 @@ for i := 0; i < 10; i++ {
 
 }
 
+// for range
+for i, item := range items {
+
+}
+
 // while loop
 for i <= 10 {
 
@@ -132,7 +137,6 @@ complex64 complex128
 var array [5]string // name[0] - name[4]
 
 primes := [...]int{2, 3, 5, 7, 11, 13}
-
 // for loop
 for i, prime := range primes {
     fmt.Println(i, prime)
@@ -141,6 +145,17 @@ for i, prime := range primes {
 // under score requirer
 for _, prime := range primes {
     fmt.Println(prime)
+}
+
+// for loop map
+kvs := map[string]string{"a": "apple", "b": "banana"}
+for k, v := range kvs {
+	fmt.Printf("%s -> %s\n", k, v)
+}
+
+// for loop string
+for i, c := range "go" {
+	fmt.Println(i, c)
 }
 
 ```
